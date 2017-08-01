@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+info.developerblog.spring.cloud.marathon.MarathonAutoConfiguration
+
+org.springframework.cloud.client.discovery.EnableDiscoveryClient=\
+info.developerblog.spring.cloud.marathon.discovery.MarathonDiscoveryClientAutoConfiguration

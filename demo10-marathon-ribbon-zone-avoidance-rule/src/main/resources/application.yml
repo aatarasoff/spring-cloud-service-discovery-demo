@@ -1,0 +1,25 @@
+server:
+  port: 9090
+
+management.security.enabled: false
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+logging:
+  level:
+    info.developerblog.spring.cloud.marathon.RibbonCustomConfiguration: DEBUG
+    com.netflix.loadbalancer.ZoneAffinityServerListFilter: DEBUG
+#    info.developerblog.spring.cloud.marathon: DEBUG
+
+test-marathon-app:
+  ribbon:
+    ZonePattern: '.+\.(.+)'
+    ServerListRefreshInterval: 1000
+    EnableZoneAffinity: true
+    zoneAffinity.minAvailableServers: 4

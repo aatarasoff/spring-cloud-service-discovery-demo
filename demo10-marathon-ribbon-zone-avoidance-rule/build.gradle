@@ -1,0 +1,5 @@
+apply plugin: 'spring-boot'
+
+dependencies {
+    compile "info.developerblog.spring.cloud:spring-cloud-marathon-starter"
+}

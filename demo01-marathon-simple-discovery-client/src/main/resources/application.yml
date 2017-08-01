@@ -1,0 +1,14 @@
+server:
+  port: 9090
+
+endpoints:
+  health:
+    sensitive: false
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+logging:
+  level:
+    info.developerblog.spring.cloud.marathon: DEBUG

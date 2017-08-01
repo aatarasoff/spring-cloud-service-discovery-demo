@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: test-marathon-app
+
+spring.cloud.discovery.client.health-indicator.enabled: false
+
+spring.cloud.marathon:
+  listOfServers: localhost:8080,localhost:8081
