@@ -17,6 +17,8 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.metrics.MetricsClientHttpRequestInterceptor;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.ApplicationContext;
@@ -48,6 +50,8 @@ import java.util.List;
 @EnableFeignClients
 @EnableDiscoveryClient
 @EnableZuulProxy
+@EnableHystrix
+@EnableHystrixDashboard
 @SpringBootApplication
 public class Application {
     @Autowired

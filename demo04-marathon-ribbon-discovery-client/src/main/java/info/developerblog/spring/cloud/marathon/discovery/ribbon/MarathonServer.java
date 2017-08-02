@@ -14,11 +14,6 @@ public class MarathonServer extends Server {
         this.healthChecks = healthChecks;
     }
 
-    public MarathonServer withZone(String zone) {
-        this.setZone(zone);
-        return this;
-    }
-
     public boolean isHealthChecksPassing() {
         return healthChecks.stream()
                 .allMatch(HealthCheckResults::getAlive);

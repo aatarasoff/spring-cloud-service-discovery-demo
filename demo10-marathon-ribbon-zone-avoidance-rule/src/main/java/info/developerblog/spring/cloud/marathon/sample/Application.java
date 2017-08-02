@@ -17,6 +17,8 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.metrics.MetricsClientHttpRequestInterceptor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -46,6 +48,8 @@ import java.util.List;
 @RestController
 @EnableFeignClients
 @EnableDiscoveryClient
+@EnableHystrix
+@EnableHystrixDashboard
 @SpringBootApplication
 public class Application {
     @Autowired

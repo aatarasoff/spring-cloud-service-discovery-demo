@@ -3,4 +3,6 @@ apply plugin: 'spring-boot'
 dependencies {
     compile "info.developerblog.spring.cloud:spring-cloud-marathon-starter"
     compile "org.springframework.cloud:spring-cloud-starter-zuul"
+    compile "org.springframework.cloud:spring-cloud-starter-hystrix"
+    compile "org.springframework.cloud:spring-cloud-starter-hystrix-dashboard"
 }

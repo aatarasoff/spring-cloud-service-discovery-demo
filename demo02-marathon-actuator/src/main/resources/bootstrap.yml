@@ -1,3 +1,5 @@
 spring:
   application:
     name: test-marathon-app
+
+#spring.cloud.discovery.client.health-indicator.enabled: false

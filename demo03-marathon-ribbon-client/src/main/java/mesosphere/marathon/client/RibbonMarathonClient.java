@@ -15,9 +15,6 @@ import mesosphere.client.common.ModelUtils;
 import mesosphere.marathon.client.auth.TokenAuthRequestInterceptor;
 import org.springframework.util.StringUtils;
 
-/**
- * Created by aleksandr on 11.01.17.
- */
 public class RibbonMarathonClient extends MarathonClient {
     static final String MARATHON_SERVICE_ID_RIBBON_PREFIX = "marathon.ribbon.";
     static final String DEFAULT_MARATHON_ENDPOINT = "http://marathon";

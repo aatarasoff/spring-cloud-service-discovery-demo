@@ -25,10 +25,7 @@ public class MarathonEndpoint extends AbstractEndpoint<MarathonEndpoint.Marathon
     @Override
     public MarathonData invoke() {
         try {
-            return MarathonData.builder()
-                    .serverInfo(marathon.getServerInfo())
-                    .apps(marathon.getApps().getApps())
-                    .build();
+            return MarathonData.builder().build();
         } catch (Exception e) {
             log.error(e.getMessage(), e);
         }

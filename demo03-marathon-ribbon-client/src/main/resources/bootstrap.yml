@@ -4,5 +4,5 @@ spring:
 
 spring.cloud.discovery.client.health-indicator.enabled: false
 
-spring.cloud.marathon:
-  listOfServers: localhost:8080,localhost:8081
+#spring.cloud.marathon:
+#  listOfServers: localhost:8080,localhost:8081
