@@ -9,7 +9,7 @@
     "type": "DOCKER",
     "volumes": [],
     "docker": {
-      "image": "test-marathon-app",
+      "image": "test-marathon-app:0.0.1",
       "network": "BRIDGE",
       "portMappings": [
         {

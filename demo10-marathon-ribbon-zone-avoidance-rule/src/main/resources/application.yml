@@ -21,5 +21,5 @@ test-marathon-app:
   ribbon:
     ZonePattern: '.+\.(.+)'
     ServerListRefreshInterval: 1000
-#    EnableZoneAffinity: true
-#    zoneAffinity.minAvailableServers: 1
+    EnableZoneAffinity: true
+    zoneAffinity.minAvailableServers: 1

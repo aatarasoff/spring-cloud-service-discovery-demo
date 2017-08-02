@@ -14,3 +14,7 @@ endpoints:
 logging:
   level:
     info.developerblog.spring.cloud.marathon: DEBUG
+
+test-marathon-app:
+  ribbon:
+    EnableZoneExclusivity: true

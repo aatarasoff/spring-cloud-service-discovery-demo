@@ -63,7 +63,7 @@ public class Application {
     @Value("${spring.application.name:test-marathon-app}")
     private String serviceId;
 
-    private volatile AtomicLong counter = new AtomicLong();
+    private AtomicLong counter = new AtomicLong();
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

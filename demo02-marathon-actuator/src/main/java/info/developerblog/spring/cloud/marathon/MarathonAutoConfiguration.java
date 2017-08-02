@@ -1,5 +1,7 @@
 package info.developerblog.spring.cloud.marathon;
 
+import info.developerblog.spring.cloud.marathon.actuator.MarathonEndpoint;
+import info.developerblog.spring.cloud.marathon.actuator.MarathonHealthIndicator;
 import mesosphere.marathon.client.Marathon;
 import mesosphere.marathon.client.MarathonClient;
 import org.springframework.boot.actuate.endpoint.Endpoint;
@@ -31,6 +33,14 @@ public class MarathonAutoConfiguration {
     @Configuration
     @ConditionalOnClass(Endpoint.class)
     protected static class MarathonHealthConfig {
+        @Bean
+        public MarathonEndpoint marathonEndpoint(Marathon marathon) {
+            return new MarathonEndpoint(marathon);
+        }
 
+        @Bean
+        public MarathonHealthIndicator marathonHealthIndicator(Marathon marathon) {
+            return new MarathonHealthIndicator(marathon);
+        }
     }
 }

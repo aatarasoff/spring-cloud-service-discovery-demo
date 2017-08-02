@@ -17,7 +17,7 @@ logging:
 
 test-marathon-app:
   ribbon:
-    ZonePattern: '.+\.(.+)'
-#    IgnoreServiceId: true
-#    MetaDataFilter:
-#      environment: test
+#    ZonePattern: '.+\.(.+)'
+    IgnoreServiceId: true
+    MetaDataFilter:
+      environment: test

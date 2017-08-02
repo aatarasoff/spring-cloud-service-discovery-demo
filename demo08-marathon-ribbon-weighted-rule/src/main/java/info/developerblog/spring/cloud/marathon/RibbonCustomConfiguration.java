@@ -9,6 +9,7 @@ import com.netflix.loadbalancer.Server;
 import com.netflix.loadbalancer.ServerList;
 import com.netflix.loadbalancer.ServerListFilter;
 import com.netflix.loadbalancer.ServerListUpdater;
+import com.netflix.loadbalancer.WeightedResponseTimeRule;
 import com.netflix.loadbalancer.ZoneAwareLoadBalancer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,7 @@ public class RibbonCustomConfiguration {
 
     @Bean
     public IRule ribbonRule() {
-        RoundRobinRule rule = new RoundRobinRule();
+        WeightedResponseTimeRule rule = new WeightedResponseTimeRule();
         rule.initWithNiwsConfig(clientConfig);
         return rule;
     }

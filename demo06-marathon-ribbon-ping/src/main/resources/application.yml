@@ -16,6 +16,6 @@ logging:
     info.developerblog.spring.cloud.marathon: DEBUG
     com.netflix.loadbalancer: DEBUG
 
-#test-marathon-app:
-#  ribbon:
-#    NFLoadBalancerPingInterval: 1
+test-marathon-app:
+  ribbon:
+    NFLoadBalancerPingInterval: 1

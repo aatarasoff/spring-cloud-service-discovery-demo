@@ -10,7 +10,7 @@ jar{
 
 task dockerBuild(type: Exec) {
     workingDir "${project.projectDir}"
-    commandLine 'docker', 'build', "--tag=test-marathon-app", '.'
+    commandLine 'docker', 'build', "--tag=test-marathon-app:0.0.1", '.'
 }
 
 dockerBuild.dependsOn build
